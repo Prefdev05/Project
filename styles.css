@@ -1,0 +1,62 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+    box-sizing: border-box;
+}
+
+h1, h2, h4 {
+    text-align: center;
+}
+
+/* Contenedor principal para los gráficos */
+.audiogramas-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los gráficos se ajusten en pantallas pequeñas */
+    justify-content: center; /* Centra los gráficos horizontalmente */
+    gap: 10px; /* Espacio entre los gráficos */
+    width: 85%;
+    max-width: 2000px; /* Ancho máximo para evitar que se estiren demasiado */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Contenedor de cada gráfico */
+.chart-container {
+    flex: 1 1 calc(50% - 40px); /* Ocupa el 50% del ancho menos el espacio del gap */
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width:  510px; /* Ancho mínimo para evitar que se compriman demasiado */
+    max-width: 620px; /* Ancho máximo para evitar que se estiren demasiado */
+    height: 430px; /* Altura fija para mantener el tamaño del eje Y */
+}
+
+/* Contenedor de ancho completo para la logoaudiometría */
+.chart-container.full-width {
+    width: 40%;
+    max-width: 600px; /* Ancho máximo */
+    margin: 10px auto; /* Centrado */
+    height: 350px; /* Altura ajustada */
+}
+
+/* Estilos para los canvas (gráficos) */
+canvas {
+    width: 100% !important;
+    height: 90% !important;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .chart-container {
+        flex: 1 1 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+        max-width: 100%;
+    }
+
+    .chart-container.full-width {
+        height: 250px; /* Altura reducida para pantallas pequeñas */
+    }
+}

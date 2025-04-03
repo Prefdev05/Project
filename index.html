@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos de Audiometría</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlaza el archivo CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Gráficos de Audiometría y Logoaudiometría</h1>
+
+    <div class="audiogramas-container">
+        <!-- Oído derecho -->
+        <div class="chart-container">
+            <h4>Oído Derecho</h4>
+            <canvas id="oidoDerechoChart"></canvas>
+        </div>
+
+        <!-- Oído izquierdo -->
+        <div class="chart-container">
+            <h4>Oído Izquierdo</h4>
+            <canvas id="oidoIzquierdoChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Logoaudiometría -->
+    <div class="chart-container full-width">
+        <h2>Logoaudiometría</h2>
+        <canvas id="logoaudiometriaChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
